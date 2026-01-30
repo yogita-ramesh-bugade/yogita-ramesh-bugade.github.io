@@ -206,7 +206,7 @@
        SAFE HOVER (NO MOVEMENT)
        ========================= */
     
-    .card-hover{
+   /* .card-hover{
       position: relative;
       transition: 
         box-shadow 200ms ease,
@@ -214,17 +214,44 @@
         background 200ms ease;
     }
     
-    /* Highlight only — no translate / no scale */
+    /* Highlight only — no translate / no scale 
     .card-hover:hover{
       /*box-shadow:
         0 0 0 1px rgba(124,58,237,.35),
         0 0 0 2px rgba(34,211,238,.15),
         0 18px 40px rgba(0,0,0,.45);
       border-color: rgba(124,58,237,.45);
-      background: rgba(255,255,255,.07);*/
+      background: rgba(255,255,255,.07);
       box-shadow: 0 0 0 2px rgba(124,58,237,.35);
       border-color: rgba(124,58,237,.55);
       background: rgba(255,255,255,.06);
+    }*/
+
+        /* =========================
+       STRONG GLOW — NO MOVEMENT
+       ========================= */
+    
+    .card-hover{
+      position: relative;
+      transition:
+        box-shadow 220ms ease,
+        border-color 220ms ease,
+        background 220ms ease;
+    }
+    
+    /* Strong neon-style glow */
+    .card-hover:hover{
+      background: rgba(255,255,255,.08);
+    
+      /* Multi-layer glow */
+      box-shadow:
+        0 0 0 1px rgba(124,58,237,.55),   /* inner purple ring */
+        0 0 0 2px rgba(34,211,238,.35),   /* cyan ring */
+        0 0 28px rgba(124,58,237,.65),    /* purple glow */
+        0 0 48px rgba(34,211,238,.45),    /* cyan glow */
+        0 26px 60px rgba(0,0,0,.65);      /* depth shadow */
+    
+      border-color: rgba(124,58,237,.75);
     }
 
   </style>
