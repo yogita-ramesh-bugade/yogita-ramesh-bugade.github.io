@@ -49,6 +49,43 @@
     .navbar .nav-link:hover{ color: var(--text); }
     .navbar .navbar-brand{ color: var(--text) !important; }
 
+          /* Smoky highlight for active nav link (ScrollSpy) */
+    /*.navbar .nav-link.active{
+      color: var(--text) !important;
+      background: rgba(255,255,255,.10) !important;    
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+    }*/
+    
+    .navbar .nav-link.active{
+      color: var(--text) !important;
+      background: rgba(255,255,255,.08) !important;
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 12px 26px rgba(0,0,0,.28);
+    }
+
+    
+    /* Smooth hover that matches the active style */
+    .navbar .nav-link{
+      border-radius: 999px;
+      padding: .45rem .75rem;
+      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+    .navbar .nav-link:hover{
+      background: rgba(255,255,255,.07);
+    }
+    
+    /* Optional: keep brand consistent */
+    .navbar .navbar-brand{
+      padding: .45rem .75rem;
+      border-radius: 999px;
+    }
+
     /* Containers / panels */
     .shell{
       background: var(--panel);
@@ -207,7 +244,7 @@
 <body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-smooth-scroll="true" tabindex="0">
 
   <!-- NAVBAR -->
-  <nav id="topnav" class="navbar navbar-expand-lg sticky-top">
+  <nav id="topnav" class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container py-2">
       <a class="navbar-brand fw-bold" href="#hero">Your Name</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -216,7 +253,7 @@
 
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">Hero</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#ai-projects">AI Security Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
