@@ -238,6 +238,35 @@
       box-shadow: var(--shadow);
     }
     .to-top.show{ display:inline-flex; gap:8px; align-items:center; }
+
+    .shell{ overflow: visible; }
+
+    .slider-viewport{
+      overflow-x: hidden;
+      overflow-y: visible;
+      padding-top: 10px;
+      padding-bottom: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .slider-track{ position: relative; z-index: 1; }
+    
+    .slider-card{ position: relative; z-index: 1; }
+    .slider-card:hover{ z-index: 50; }
+    
+    .card-hover{
+      position: relative;
+      transform: translateZ(0);
+      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    }
+    .card-hover:hover{
+      transform: translateY(-6px);
+      box-shadow: 0 22px 55px rgba(0,0,0,.45);
+      border-color: rgba(255,255,255,.22);
+    }
+    
+    .nav-arrow{ position: relative; z-index: 5; }
   </style>
 </head>
 
