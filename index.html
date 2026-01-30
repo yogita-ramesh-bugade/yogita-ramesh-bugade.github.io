@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <title>Yogita Bugade — AI Cybersecurity Portfolio</title>
+  <meta name="description" content="AI Security • Cybersecurity Automation • Secure APIs • Threat Modeling • SOAR/EDR Playbooks" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yogita Bugade — AI Cybersecurity Portfolio" />
+  <meta property="og:description" content="AI Security, Cybersecurity Automation, Secure AI/ML APIs, Threat Modeling, and SOC Playbooks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./assets/og.svg" />
+
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+
+<body>
+  <!-- Top progress bar -->
+  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand__mark" aria-hidden="true">YB</span>
+        <span class="brand__text">Yogita Bugade</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#projects">Projects</a>
+        <a href="#writeups">Write-ups</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav__actions">
+        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
+          <span class="icon" aria-hidden="true">☾</span>
+          <span class="btn__text">Theme</span>
+        </button>
+        <a class="btn btn--primary" href="./resume.pdf" target="_blank" rel="noopener">
+          Resume
+        </a>
+        <button class="hamburger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile" id="mobileMenu" hidden>
+      <div class="container mobile__inner">
+        <a href="#projects" class="mobile__link">Projects</a>
+        <a href="#writeups" class="mobile__link">Write-ups</a>
+        <a href="#skills" class="mobile__link">Skills</a>
+        <a href="#contact" class="mobile__link">Contact</a>
+        <div class="mobile__row">
+          <a class="btn btn--primary" href="./resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <button class="btn btn--ghost" id="themeToggle2" type="button">Toggle theme</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <div class="eyebrow">
+            <span class="dot"></span>
+            AI Security • Cybersecurity Automation • Secure APIs
+          </div>
+
+          <h1 class="hero__title">
+            Building <span class="glow">security-first</span> AI systems and automation that hold up in the real world.
+          </h1>
+
+          <p class="hero__subtitle">
+            I’m <b>Yogita</b>, an Associate Cybersecurity Engineer. I build secure AI/ML APIs, prompt-injection defenses,
+            policy enforcement, rate limiting, audit logging, and SOC automation playbooks.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View projects</a>
+            <a class="btn btn--ghost" href="#contact">Contact me</a>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">OWASP AI Top 10</span>
+            <span class="chip">FastAPI + JWT</span>
+            <span class="chip">OPA policy-as-code</span>
+            <span class="chip">Docker + Trivy</span>
+            <span class="chip">SOAR / IR workflows</span>
+          </div>
+
+          <div class="social">
+            <a class="social__link" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+            <span class="sep">•</span>
+            <a class="social__link" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+            <span class="sep">•</span>
+            <a class="social__link" href="mailto:YOUR_EMAIL">Email</a>
+          </div>
+        </div>
+
+        <aside class="hero__card" aria-label="Security Snapshot">
+          <div class="glass">
+            <div class="card__top">
+              <div class="avatar" aria-hidden="true">
+                <span>YB</span>
+              </div>
+              <div>
+                <div class="card__name">Yogita Bugade</div>
+                <div class="card__role">AI Security • Cyber Automation</div>
+              </div>
+            </div>
+
+            <div class="card__stats">
+              <div class="stat">
+                <div class="stat__k">Focus</div>
+                <div class="stat__v">Secure AI + Automation</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k">Strength</div>
+                <div class="stat__v">Threat modeling + controls</div>
+              </div>
+              <div class="stat">
+                <div class="stat__k">Style</div>
+                <div class="stat__v">Practical, production-minded</div>
+              </div>
+            </div>
+
+            <div class="card__panel">
+              <div class="panel__title">What you’ll see here</div>
+              <ul class="panel__list">
+                <li>Secure AI/ML Model Serving API (defenses + auditability)</li>
+                <li>SOAR/EDR playbooks (detection → triage → containment)</li>
+                <li>Threat models and control mappings</li>
+                <li>Write-ups that explain the “why” and “how”</li>
+              </ul>
+            </div>
+
+            <div class="card__footer">
+              <span class="badge">Available for interviews</span>
+              <span class="muted">NJ • Open to relocation</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__bg" aria-hidden="true"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head">
+          <h2>Featured projects</h2>
+          <p class="muted">
+            Security-first builds with clear threat models, controls, and measurable outcomes.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <div class="search">
+            <input id="searchInput" type="search" placeholder="Search projects (e.g., FastAPI, prompt injection, SOAR)..." autocomplete="off" />
+          </div>
+          <div class="filters" id="tagFilters" aria-label="Project filters"></div>
+        </div>
+
+        <div class="grid" id="projectsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- WRITE-UPS -->
+    <section class="section" id="writeups">
+      <div class="container">
+        <div class="section__head">
+          <h2>Write-ups</h2>
+          <p class="muted">
+            Short, recruiter-friendly explanations of what I built, the risks, and how I mitigated them.
+          </p>
+        </div>
+
+        <div class="grid grid--2">
+          <article class="post card">
+            <h3>Prompt Injection: Practical defenses that work</h3>
+            <p class="muted">
+              A checklist of layered controls: input constraints, tool allowlists, policy checks, rate limiting,
+              and logging for incident response.
+            </p>
+            <a class="link" href="#" aria-label="Read write-up">Read →</a>
+          </article>
+
+          <article class="post card">
+            <h3>Threat modeling an AI API (STRIDE + OWASP AI Top 10)</h3>
+            <p class="muted">
+              How to model the system, map threats to controls, and document assumptions for audits.
+            </p>
+            <a class="link" href="#" aria-label="Read write-up">Read →</a>
+          </article>
+
+          <article class="post card">
+            <h3>Rate limiting + audit logs for AI systems</h3>
+            <p class="muted">
+              Abuse prevention and accountability: rate limits, request IDs, tamper-aware logging, and retention.
+            </p>
+            <a class="link" href="#" aria-label="Read write-up">Read →</a>
+          </article>
+
+          <article class="post card">
+            <h3>SOAR playbooks that don’t become “shelfware”</h3>
+            <p class="muted">
+              Designing workflows that are measurable, maintainable, and safe to automate (with human-in-the-loop).
+            </p>
+            <a class="link" href="#" aria-label="Read write-up">Read →</a>
+          </article>
+        </div>
+
+        <div class="note">
+          <div class="note__title">Tip</div>
+          <div class="note__body muted">
+            Replace the “Read →” links with your GitHub READMEs, Markdown pages, or Google Docs (public).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head">
+          <h2>Skills & tools</h2>
+          <p class="muted">A practical toolkit for securing AI-enabled systems.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>AI Security</h3>
+            <div class="pills">
+              <span class="pill">OWASP AI Top 10</span>
+              <span class="pill">Prompt injection defenses</span>
+              <span class="pill">Model/API abuse prevention</span>
+              <span class="pill">Threat modeling</span>
+              <span class="pill">Policy enforcement</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Engineering</h3>
+            <div class="pills">
+              <span class="pill">Python</span>
+              <span class="pill">FastAPI</span>
+              <span class="pill">JWT auth</span>
+              <span class="pill">Redis rate limiting</span>
+              <span class="pill">Docker</span>
+              <span class="pill">Trivy scanning</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Enterprise Security</h3>
+            <div class="pills">
+              <span class="pill">SOAR workflows</span>
+              <span class="pill">Incident response</span>
+              <span class="pill">Splunk</span>
+              <span class="pill">ServiceNow</span>
+              <span class="pill">Azure</span>
+              <span class="pill">CASB / DLP concepts</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p class="muted">Want to discuss AI security, automation, or a role? I reply quickly.</p>
+        </div>
+
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Reach me</h3>
+            <p class="muted">
+              Email is best. If you’re a recruiter, please include:
+              role title, location, and sponsorship details.
+            </p>
+
+            <div class="contact">
+              <a class="btn btn--primary" href="mailto:YOUR_EMAIL">Email</a>
+              <a class="btn btn--ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
+              <a class="btn btn--ghost" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+            </div>
+
+            <div class="mini muted">
+              Tip: add <code>resume.pdf</code> in repo root so the Resume button works.
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Quick note (copy/paste)</h3>
+            <pre class="snippet" id="copySnippet">Hi Yogita,
+I saw your AI Security portfolio. I’d love to connect about a role on our security team.
+Are you available this week for a quick chat?</pre>
+            <button class="btn btn--primary" type="button" id="copyBtn">Copy message</button>
+            <div class="toast" id="toast" role="status" aria-live="polite" hidden>Copied!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="muted">© <span id="year"></span> Yogita Bugade</div>
+        <div class="muted">
+          Built with free tools • Hosted on GitHub Pages
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Project modal -->
+  <dialog class="modal" id="modal">
+    <div class="modal__panel">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title" id="modalTitle">Project</div>
+          <div class="modal__meta muted" id="modalMeta"></div>
+        </div>
+        <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal__body">
+        <div class="modal__badges" id="modalBadges"></div>
+
+        <div class="modal__section">
+          <div class="k">Problem</div>
+          <div class="v" id="modalProblem"></div>
+        </div>
+
+        <div class="modal__section">
+          <div class="k">Approach</div>
+          <div class="v" id="modalApproach"></div>
+        </div>
+
+        <div class="modal__section">
+          <div class="k">Security Controls</div>
+          <ul class="v list" id="modalControls"></ul>
+        </div>
+
+        <div class="modal__section">
+          <div class="k">Impact</div>
+          <div class="v" id="modalImpact"></div>
+        </div>
+
+        <div class="modal__actions">
+          <a class="btn btn--primary" id="modalRepo" href="#" target="_blank" rel="noopener">View repo</a>
+          <a class="btn btn--ghost" id="modalDemo" href="#" target="_blank" rel="noopener">Docs / demo</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="./assets/app.js"></script>
+</body>
+</html>
