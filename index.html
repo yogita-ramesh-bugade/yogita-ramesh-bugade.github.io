@@ -3,335 +3,336 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="color-scheme" content="dark light" />
-  <title>Yogita Bugade — AI Cybersecurity Portfolio</title>
-  <meta name="description" content="AI Security • Cybersecurity Automation • Secure APIs • Threat Modeling • SOAR/EDR Playbooks" />
+  <title>Yogita Bugade | AI Cybersecurity Portfolio</title>
+  <meta name="description" content="AI Security + Cybersecurity Automation portfolio." />
 
-  <meta property="og:title" content="Yogita Bugade — AI Cybersecurity Portfolio" />
-  <meta property="og:description" content="AI Security, Cybersecurity Automation, Secure AI/ML APIs, Threat Modeling, and SOC Playbooks." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="./assets/og.svg" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="assets/styles.css?v=3">
+  <style>
+    /* Optional: subtle dark theme polish */
+    body { background:#0b1020; color:#e7e9ee; }
+    .navbar, .card { background:#121a33 !important; border-color:#23305a !important; }
+    .card { border-radius: 16px; }
+    .muted { color:#b7c0df; }
+    .btn-primary { border: none; }
+    .badge { margin-right:6px; margin-top:6px; }
+    .page-link { background:#121a33; border-color:#23305a; color:#9ad5ff; }
+    .page-link:hover { background:#182044; color:#fff; }
+    .active > .page-link { background:#2a63ff !important; border-color:#2a63ff !important; color:#fff !important; }
+    a { color:#9ad5ff; }
+  </style>
 </head>
 
 <body>
-  <div class="progress" aria-hidden="true"><div class="progress__bar" id="progressBar"></div></div>
-
-  <header class="nav" id="top">
-    <div class="container nav__inner">
-      <a class="brand" href="#top" aria-label="Home">
-        <span class="brand__mark" aria-hidden="true">YB</span>
-        <span class="brand__text">Yogita Bugade</span>
-      </a>
-
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#projects">Projects</a>
-        <a href="#resources">Resources</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="nav__actions">
-        <button class="btn btn--ghost" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="icon" aria-hidden="true">☾</span>
-          <span class="btn__text">Theme</span>
-        </button>
-        <a class="btn btn--primary" href="./resume.pdf" target="_blank" rel="noopener">Resume</a>
-        <button class="hamburger" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg border-bottom border-opacity-25">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold text-white" href="#">Yogita R. Bugade</a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="mobile" id="mobileMenu" hidden>
-      <div class="container mobile__inner">
-        <a href="#projects" class="mobile__link">Projects</a>
-        <a href="#resources" class="mobile__link">Resources</a>
-        <a href="#skills" class="mobile__link">Skills</a>
-        <a href="#contact" class="mobile__link">Contact</a>
-        <div class="mobile__row">
-          <a class="btn btn--primary" href="./resume.pdf" target="_blank" rel="noopener">Resume</a>
-          <button class="btn btn--ghost" id="themeToggle2" type="button">Toggle theme</button>
+  <!-- HERO -->
+  <header class="container my-5">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-8">
+        <h1 class="display-5 fw-bold">AI Cybersecurity Portfolio</h1>
+        <p class="muted fs-5 mb-3">
+          Associate Cybersecurity Engineer • AI Security • Automation • Cloud & Enterprise Security
+        </p>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge rounded-pill text-bg-secondary">FastAPI</span>
+          <span class="badge rounded-pill text-bg-secondary">JWT</span>
+          <span class="badge rounded-pill text-bg-secondary">OPA</span>
+          <span class="badge rounded-pill text-bg-secondary">Docker</span>
+          <span class="badge rounded-pill text-bg-secondary">Trivy</span>
+          <span class="badge rounded-pill text-bg-secondary">SOAR</span>
+          <span class="badge rounded-pill text-bg-secondary">Azure</span>
+          <span class="badge rounded-pill text-bg-secondary">Island</span>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn btn-outline-light" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-outline-light" href="mailto:YOUR_EMAIL">Email</a>
+          <a class="btn btn-outline-light" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title mb-2">What I build</h5>
+            <p class="card-text muted mb-0">
+              Security-first AI/ML APIs, prompt-injection defenses, policy enforcement, rate limiting,
+              audit logging, and SOC automation playbooks — designed to be production-ready.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <main>
-    <!-- HERO (structured, less clutter) -->
-    <section class="hero">
-      <div class="container hero__grid">
-        <div class="hero__left">
-          <div class="eyebrow">
-            <span class="dot"></span>
-            AI Security • Cybersecurity Automation • Secure APIs
-          </div>
-
-          <h1 class="hero__title">
-            AI security portfolio built for real enterprise systems.
-          </h1>
-
-          <p class="hero__subtitle">
-            I’m <b>Yogita</b>, an Associate Cybersecurity Engineer. I build secure AI/ML APIs and security automation:
-            <b>prompt-injection defenses</b>, <b>policy enforcement</b>, <b>rate limiting</b>, and <b>audit logging</b>—plus SOC playbooks that don’t become shelfware.
-          </p>
-
-          <div class="hero__buttons">
-            <a class="btn btn--primary" href="#projects">View projects</a>
-            <a class="btn btn--ghost" href="#contact">Contact</a>
-          </div>
-
-          <div class="hero__meta">
-            <div class="meta">
-              <div class="meta__k">Location</div>
-              <div class="meta__v">New Jersey, USA</div>
-            </div>
-            <div class="meta">
-              <div class="meta__k">Focus</div>
-              <div class="meta__v">AI Security + Automation</div>
-            </div>
-            <div class="meta">
-              <div class="meta__k">Favorite tools</div>
-              <div class="meta__v">FastAPI • OPA • Docker • Trivy</div>
-            </div>
-          </div>
-
-          <div class="social">
-            <a class="social__link" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
-            <span class="sep">•</span>
-            <a class="social__link" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-            <span class="sep">•</span>
-            <a class="social__link" href="mailto:YOUR_EMAIL">Email</a>
-          </div>
-        </div>
-
-        <!-- Right: clean summary card -->
-        <aside class="hero__right">
-          <div class="panel">
-            <div class="panel__title">Security Snapshot</div>
-            <div class="panel__subtitle">What recruiters should know in 10 seconds</div>
-
-            <div class="panel__rows">
-              <div class="row">
-                <div class="row__k">Strength</div>
-                <div class="row__v">Threat modeling + controls mapping</div>
-              </div>
-              <div class="row">
-                <div class="row__k">Systems</div>
-                <div class="row__v">AI APIs, automation playbooks, enterprise security</div>
-              </div>
-              <div class="row">
-                <div class="row__k">What I ship</div>
-                <div class="row__v">Secure-by-default patterns + documentation</div>
-              </div>
-            </div>
-
-            <div class="panel__chips">
-              <span class="chip">OWASP AI Top 10</span>
-              <span class="chip">JWT + scopes</span>
-              <span class="chip">Policy checks</span>
-              <span class="chip">Telemetry</span>
-            </div>
-
-            <div class="panel__footer">
-              <span class="badge">Open to interviews</span>
-              <span class="muted">AI Security / Cyber Automation</span>
-            </div>
-          </div>
-        </aside>
+  <!-- PROJECTS -->
+  <section class="container my-5" id="projects">
+    <div class="d-flex align-items-end justify-content-between flex-wrap gap-2 mb-3">
+      <div>
+        <h2 class="fw-bold mb-1">Featured Projects</h2>
+        <div class="muted">Use the arrows or page numbers to browse (1 / 2 / 3).</div>
       </div>
+      <div class="muted small">Tip: Replace repo links with your real GitHub repos.</div>
+    </div>
 
-      <div class="hero__bg" aria-hidden="true"></div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <div class="container">
-        <div class="section__head">
-          <h2>Projects</h2>
-          <p class="muted">Well-scoped builds with clear threat models, security controls, and outcomes.</p>
-        </div>
-
-        <div class="toolbar">
-          <div class="search">
-            <input id="searchInput" type="search" placeholder="Search projects (FastAPI, prompt injection, SOAR, OPA)..." autocomplete="off" />
-          </div>
-          <div class="filters" id="tagFilters" aria-label="Project filters"></div>
-        </div>
-
-        <div class="grid" id="projectsGrid" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <!-- RESOURCES (cleaner than “Write-ups”) -->
-    <section class="section" id="resources">
-      <div class="container">
-        <div class="section__head">
-          <h2>Resources</h2>
-          <p class="muted">Short explanations + templates you can reuse for AI security reviews.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <h3 class="card__h">Prompt Injection Defense Checklist</h3>
-            <p class="muted">Layered controls: constraints, allowlists, policy checks, rate limiting, and logging.</p>
-            <a class="link" href="#" target="_blank" rel="noopener">Open →</a>
-          </article>
-
-          <article class="card">
-            <h3 class="card__h">Threat Modeling Template (STRIDE + OWASP AI Top 10)</h3>
-            <p class="muted">A reusable structure to document threats, assumptions, trust boundaries, and mitigations.</p>
-            <a class="link" href="#" target="_blank" rel="noopener">Open →</a>
-          </article>
-
-          <article class="card">
-            <h3 class="card__h">Rate Limiting & Audit Logging Patterns</h3>
-            <p class="muted">Abuse prevention + accountability patterns for AI endpoints and automation.</p>
-            <a class="link" href="#" target="_blank" rel="noopener">Open →</a>
-          </article>
-
-          <article class="card">
-            <h3 class="card__h">SOAR Playbook Design (Practical)</h3>
-            <p class="muted">How to keep playbooks measurable, safe, maintainable, and useful.</p>
-            <a class="link" href="#" target="_blank" rel="noopener">Open →</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <div class="container">
-        <div class="section__head">
-          <h2>Skills</h2>
-          <p class="muted">A practical toolkit for securing AI-enabled systems.</p>
-        </div>
-
-        <div class="grid grid--3">
-          <div class="card">
-            <h3 class="card__h">AI Security</h3>
-            <div class="pills">
-              <span class="pill">OWASP AI Top 10</span>
-              <span class="pill">Prompt injection defenses</span>
-              <span class="pill">Model/API abuse prevention</span>
-              <span class="pill">Threat modeling</span>
-              <span class="pill">Policy enforcement</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 class="card__h">Engineering</h3>
-            <div class="pills">
-              <span class="pill">Python</span>
-              <span class="pill">FastAPI</span>
-              <span class="pill">JWT auth</span>
-              <span class="pill">Redis rate limiting</span>
-              <span class="pill">Docker</span>
-              <span class="pill">Trivy scanning</span>
-            </div>
-          </div>
-
-          <div class="card">
-            <h3 class="card__h">Enterprise</h3>
-            <div class="pills">
-              <span class="pill">SOAR workflows</span>
-              <span class="pill">Incident response</span>
-              <span class="pill">Splunk</span>
-              <span class="pill">ServiceNow</span>
-              <span class="pill">Azure</span>
-              <span class="pill">CASB / DLP concepts</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section__head">
-          <h2>Contact</h2>
-          <p class="muted">For roles in AI Security / Cyber Automation — email is best.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <div class="card">
-            <h3 class="card__h">Reach me</h3>
-            <p class="muted">
-              If you’re a recruiter, please include role title, location, and sponsorship details.
+    <!-- PAGE 1 -->
+    <div class="row g-4 page" id="page1">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Secure AI/ML Model Serving API</h5>
+            <p class="card-text muted">
+              Production-style model serving API with JWT authentication, rate limiting, audit logging,
+              prompt-injection mitigations, and policy-as-code authorization.
             </p>
-            <div class="contact">
-              <a class="btn btn--primary" href="mailto:YOUR_EMAIL">Email</a>
-              <a class="btn btn--ghost" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">LinkedIn</a>
-              <a class="btn btn--ghost" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">GitHub</a>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-primary">AI Security</span>
+              <span class="badge text-bg-success">FastAPI</span>
+              <span class="badge text-bg-info">JWT</span>
+              <span class="badge text-bg-warning text-dark">Redis</span>
+              <span class="badge text-bg-secondary">OPA</span>
+              <span class="badge text-bg-danger">Trivy</span>
             </div>
-            <div class="mini muted">Add <code>resume.pdf</code> in repo root so Resume works.</div>
           </div>
-
-          <div class="card">
-            <h3 class="card__h">Quick message (copy/paste)</h3>
-            <pre class="snippet" id="copySnippet">Hi Yogita,
-I saw your AI Security portfolio and would love to connect about a role on our security team.
-Are you available this week for a quick call?</pre>
-            <button class="btn btn--primary" type="button" id="copyBtn">Copy message</button>
-            <div class="toast" id="toast" role="status" aria-live="polite" hidden>Copied!</div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/secure-ml-api" target="_blank" rel="noreferrer">GitHub Repo</a>
           </div>
         </div>
       </div>
-    </section>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="muted">© <span id="year"></span> Yogita Bugade</div>
-        <div class="muted">Built with free tools • Hosted on GitHub Pages</div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Project modal (kept) -->
-  <dialog class="modal" id="modal">
-    <div class="modal__panel">
-      <div class="modal__head">
-        <div>
-          <div class="modal__title" id="modalTitle">Project</div>
-          <div class="modal__meta muted" id="modalMeta"></div>
-        </div>
-        <button class="modal__close" id="modalClose" aria-label="Close">✕</button>
-      </div>
-
-      <div class="modal__body">
-        <div class="modal__badges" id="modalBadges"></div>
-
-        <div class="modal__section">
-          <div class="k">Problem</div>
-          <div class="v" id="modalProblem"></div>
-        </div>
-
-        <div class="modal__section">
-          <div class="k">Approach</div>
-          <div class="v" id="modalApproach"></div>
-        </div>
-
-        <div class="modal__section">
-          <div class="k">Security Controls</div>
-          <ul class="v list" id="modalControls"></ul>
-        </div>
-
-        <div class="modal__section">
-          <div class="k">Impact</div>
-          <div class="v" id="modalImpact"></div>
-        </div>
-
-        <div class="modal__actions">
-          <a class="btn btn--primary" id="modalRepo" href="#" target="_blank" rel="noopener">View repo</a>
-          <a class="btn btn--ghost" id="modalDemo" href="#" target="_blank" rel="noopener">Docs / demo</a>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">SOAR / EDR Automation (LimaCharlie + Tines)</h5>
+            <p class="card-text muted">
+              Automated SOC workflows: detection → triage → containment, with structured playbooks
+              and audit-friendly steps.
+            </p>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-warning text-dark">SOAR</span>
+              <span class="badge text-bg-info">EDR</span>
+              <span class="badge text-bg-primary">Automation</span>
+              <span class="badge text-bg-secondary">Playbooks</span>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/soar-edr-limacharlie-tines" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
         </div>
       </div>
     </div>
-  </dialog>
 
-  <script src="./assets/app.js"></script>
+    <!-- PAGE 2 -->
+    <div class="row g-4 page d-none" id="page2">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">AI Threat Modeling Library</h5>
+            <p class="card-text muted">
+              STRIDE-based threat models for AI APIs, agentic workflows, and RAG pipelines.
+              Includes control mapping and Mermaid diagrams.
+            </p>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-danger">Threat Modeling</span>
+              <span class="badge text-bg-dark">STRIDE</span>
+              <span class="badge text-bg-secondary">Mermaid</span>
+              <span class="badge text-bg-primary">OWASP AI</span>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/ai-threat-models" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">IAM for AI Agents (Non-Human Identities)</h5>
+            <p class="card-text muted">
+              Secure authorization patterns for AI agents: lifecycle, least privilege,
+              “on-behalf-of” flows, revocation, and auditability.
+            </p>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-secondary">IAM</span>
+              <span class="badge text-bg-primary">AuthZ</span>
+              <span class="badge text-bg-success">Least Privilege</span>
+              <span class="badge text-bg-info">Audit</span>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/agent-iam-patterns" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="row g-4 page d-none" id="page3">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Enterprise Security Write-ups (Sanitized)</h5>
+            <p class="card-text muted">
+              Browser isolation troubleshooting, CASB policy investigations, ServiceNow incident notes,
+              and cloud security integrations — written in a clean, reusable format.
+            </p>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-success">Enterprise</span>
+              <span class="badge text-bg-info">ServiceNow</span>
+              <span class="badge text-bg-secondary">Island</span>
+              <span class="badge text-bg-primary">CASB</span>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/security-writeups" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Security Tooling & Hardening Notes</h5>
+            <p class="card-text muted">
+              Practical notes on secure configs, certificates, browser isolation settings,
+              and defensive engineering checklists.
+            </p>
+            <div class="d-flex flex-wrap">
+              <span class="badge text-bg-warning text-dark">Hardening</span>
+              <span class="badge text-bg-danger">AppSec</span>
+              <span class="badge text-bg-secondary">Docs</span>
+            </div>
+          </div>
+          <div class="card-footer border-0 bg-transparent">
+            <a class="btn btn-sm btn-outline-light" href="https://github.com/YOUR-USERNAME/security-notes" target="_blank" rel="noreferrer">GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGINATION -->
+    <nav class="mt-5">
+      <ul class="pagination justify-content-center align-items-center" id="pagination">
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Previous" onclick="prevPage(event)">‹</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#" onclick="showPage(event, 1)">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="showPage(event, 2)">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" onclick="showPage(event, 3)">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next" onclick="nextPage(event)">›</a>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container my-5" id="skills">
+    <h2 class="fw-bold mb-3">Skills</h2>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <div class="d-flex flex-wrap">
+          <span class="badge rounded-pill text-bg-secondary">Python</span>
+          <span class="badge rounded-pill text-bg-secondary">FastAPI</span>
+          <span class="badge rounded-pill text-bg-secondary">JWT</span>
+          <span class="badge rounded-pill text-bg-secondary">Redis</span>
+          <span class="badge rounded-pill text-bg-secondary">OPA</span>
+          <span class="badge rounded-pill text-bg-secondary">Docker</span>
+          <span class="badge rounded-pill text-bg-secondary">Trivy</span>
+          <span class="badge rounded-pill text-bg-secondary">GitHub Actions</span>
+          <span class="badge rounded-pill text-bg-secondary">SOAR</span>
+          <span class="badge rounded-pill text-bg-secondary">ServiceNow</span>
+          <span class="badge rounded-pill text-bg-secondary">Azure</span>
+          <span class="badge rounded-pill text-bg-secondary">SkyHigh CASB</span>
+          <span class="badge rounded-pill text-bg-secondary">Island Browser</span>
+          <span class="badge rounded-pill text-bg-secondary">Threat Modeling</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container my-5" id="contact">
+    <h2 class="fw-bold mb-3">Contact</h2>
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <p class="mb-2"><span class="muted">Email:</span> <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a></p>
+        <p class="mb-2"><span class="muted">LinkedIn:</span> <a href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noreferrer">YOUR_LINKEDIN</a></p>
+        <p class="mb-0"><span class="muted">GitHub:</span> <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">YOUR-USERNAME</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container py-4 text-center muted">
+    © <span id="year"></span> Yogita R. Bugade • Built with free tools • Hosted on GitHub Pages
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Pagination logic
+    let currentPage = 1;
+    const totalPages = 3;
+
+    function renderPaginationActive(pageNumber) {
+      const items = document.querySelectorAll("#pagination .page-item");
+      // items: [prev, 1,2,3, next]
+      items.forEach((li, idx) => {
+        if (idx >= 1 && idx <= 3) li.classList.remove("active");
+      });
+      items[pageNumber].classList.add("active"); // because index 1 = page1
+    }
+
+    function showOnlyPage(pageNumber) {
+      const pages = document.querySelectorAll(".page");
+      pages.forEach(p => p.classList.add("d-none"));
+      document.getElementById(`page${pageNumber}`).classList.remove("d-none");
+    }
+
+    function showPage(e, pageNumber) {
+      e.preventDefault();
+      currentPage = pageNumber;
+      showOnlyPage(currentPage);
+      renderPaginationActive(currentPage);
+    }
+
+    function prevPage(e) {
+      e.preventDefault();
+      currentPage = Math.max(1, currentPage - 1);
+      showOnlyPage(currentPage);
+      renderPaginationActive(currentPage);
+    }
+
+    function nextPage(e) {
+      e.preventDefault();
+      currentPage = Math.min(totalPages, currentPage + 1);
+      showOnlyPage(currentPage);
+      renderPaginationActive(currentPage);
+    }
+  </script>
 </body>
 </html>
