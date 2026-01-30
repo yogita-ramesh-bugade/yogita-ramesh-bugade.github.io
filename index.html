@@ -96,6 +96,14 @@
     }
     .muted{ color: var(--muted); }
 
+    .card-hover{
+      transition: transform 200ms ease, box-shadow 200ms ease;
+    }
+
+    .card-hover:hover{
+      transform: translateY(-3px) scale(1.01);
+      box-shadow: 0 20px 48px rgba(0,0,0,.45);
+    }
     /* Fancy headings */
     .h-grad{
       background: linear-gradient(90deg, #ffffff, rgba(255,255,255,.75), rgba(255,255,255,.92));
