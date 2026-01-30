@@ -49,43 +49,6 @@
     .navbar .nav-link:hover{ color: var(--text); }
     .navbar .navbar-brand{ color: var(--text) !important; }
 
-          /* Smoky highlight for active nav link (ScrollSpy) */
-    /*.navbar .nav-link.active{
-      color: var(--text) !important;
-      background: rgba(255,255,255,.10) !important;    
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 999px;
-      padding: .45rem .75rem;
-      box-shadow: 0 10px 22px rgba(0,0,0,.25);
-    }*/
-    
-    .navbar .nav-link.active{
-      color: var(--text) !important;
-      background: rgba(255,255,255,.08) !important;
-      border: 1px solid rgba(255,255,255,.18);
-      border-radius: 999px;
-      padding: .45rem .75rem;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 12px 26px rgba(0,0,0,.28);
-    }
-
-    
-    /* Smooth hover that matches the active style */
-    .navbar .nav-link{
-      border-radius: 999px;
-      padding: .45rem .75rem;
-      transition: background 160ms ease, border-color 160ms ease, color 160ms ease;
-    }
-    .navbar .nav-link:hover{
-      background: rgba(255,255,255,.07);
-    }
-    
-    /* Optional: keep brand consistent */
-    .navbar .navbar-brand{
-      padding: .45rem .75rem;
-      border-radius: 999px;
-    }
-
     /* Containers / panels */
     .shell{
       background: var(--panel);
@@ -180,19 +143,13 @@
       margin-bottom:14px;
     }
 
-          /* IMPORTANT: keep horizontal clip for slider, allow vertical hover pop */
-    .slider-viewport{
-      overflow-x: hidden;
-      overflow-y: visible;
-      padding-top: 10px;     /* space so hover doesn't clip at top */
-      padding-bottom: 6px;
-      position: relative;
-    }
-    
-    /* Track is translated during sliding; set stacking context cleanly */
+    /* Slider rectangle */
+    .slider-viewport{ overflow:hidden; width:100%; }
     .slider-track{
-      position: relative;
-      z-index: 1;
+      display:flex;
+      gap:16px;
+      transition: transform 320ms ease;
+      will-change: transform;
     }
 
     /* 3 cards visible on desktop, 2 on tablet, 1 on mobile */
@@ -244,36 +201,13 @@
       box-shadow: var(--shadow);
     }
     .to-top.show{ display:inline-flex; gap:8px; align-items:center; }
-
-    /* Each slider card must be able to layer above neighbors */
-    .slider-card{
-      position: relative;
-      z-index: 1;
-    }
-    
-    /* Hover should bring card above everything in the slider */
-    .slider-card:hover{
-      z-index: 50;
-    }
-    .card-hover{
-      position: relative;
-      transform: translateZ(0); /* helps with smooth rendering */
-      transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
-    }
-    
-    .card-hover:hover{
-      transform: translateY(-6px);
-      box-shadow: 0 22px 55px rgba(0,0,0,.45);
-      border-color: rgba(255,255,255,.22);
-    }
-
   </style>
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-smooth-scroll="true" tabindex="0">
 
   <!-- NAVBAR -->
-  <nav id="topnav" class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <nav id="topnav" class="navbar navbar-expand-lg sticky-top">
     <div class="container py-2">
       <a class="navbar-brand fw-bold" href="#hero">Your Name</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
@@ -282,7 +216,7 @@
 
       <div class="collapse navbar-collapse" id="nav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#hero">Hero</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#ai-projects">AI Security Projects</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
