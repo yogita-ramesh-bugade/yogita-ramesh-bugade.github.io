@@ -3,194 +3,942 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AI Cybersecurity Portfolio</title>
+  <title>AI Security Engineer Portfolio</title>
 
-  <!-- Bootstrap CSS (required for tiles/cards) -->
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <style>
-    /* Keep only tiny styling that won't break Bootstrap visibility */
-    body { background: #f6f7fb; }
-    .hero { background: #0d6efd; color: #fff; }
-    .card { border-radius: 16px; }
-    .muted { color: #6c757d; }
+    body { background:#f6f7fb; }
+
+    /* Slider container (rectangle) */
+    .section-shell {
+      background:#ffffff;
+      border:1px solid rgba(0,0,0,.08);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.05);
+    }
+
+    /* Slider viewport */
+    .slider-viewport {
+      overflow:hidden;
+      width:100%;
+    }
+
+    /* Slider track */
+    .slider-track {
+      display:flex;
+      gap:16px;
+      transition: transform 320ms ease;
+      will-change: transform;
+    }
+
+    /* Slider card sizing:
+       - Desktop: 3 cards visible
+       - Tablet: 2 cards visible
+       - Mobile: 1 card visible
+    */
+    .slider-card {
+      flex: 0 0 calc((100% - 32px) / 3);
+    }
+
+    @media (max-width: 991.98px) {
+      .slider-card { flex: 0 0 calc((100% - 16px) / 2); }
+    }
+    @media (max-width: 575.98px) {
+      .slider-card { flex: 0 0 100%; }
+    }
+
+    .nav-arrow {
+      width:44px; height:44px;
+      border-radius:999px;
+      display:inline-flex; align-items:center; justify-content:center;
+    }
+
+    .section-title {
+      display:flex;
+      align-items:end;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:12px;
+    }
+
+    .muted { color:#6c757d; }
+    .card { border-radius:16px; }
+    .badge { margin-right:6px; margin-top:6px; }
+    .anchor-offset { scroll-margin-top: 90px; } /* navbar offset */
   </style>
 </head>
 
 <body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold" href="#hero">AI Security Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <!-- HERO -->
-  <header class="hero py-5">
-    <div class="container">
-      <h1 class="fw-bold mb-2">Yogita R. Bugade</h1>
-      <p class="mb-3">AI Security • Cybersecurity Automation • Secure APIs • Threat Modeling</p>
-      <div class="d-flex flex-wrap gap-2">
-        <a class="btn btn-light" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn btn-outline-light" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="btn btn-outline-light" href="mailto:YOUR_EMAIL">Email</a>
-        <a class="btn btn-outline-light" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Hero</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#ai-knowledge">AI Security</a></li>
+          <li class="nav-item"><a class="nav-link" href="#threat-modeling">Threat Modeling</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tools">Tools</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certs">Certs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- PROJECTS -->
-  <section class="container my-5" id="projects">
-    <div class="d-flex justify-content-between align-items-end flex-wrap gap-2 mb-3">
-      <div>
-        <h2 class="fw-bold mb-1">Featured Projects</h2>
-        <div class="muted">Browse using arrows or pages 1 / 2 / 3</div>
+  <!-- HERO SECTION -->
+  <section class="container my-5 anchor-offset" id="hero">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h1 class="fw-bold mb-1">Your Name</h1>
+          <div class="muted">
+            AI Security Engineer (Aspiring) • Cybersecurity Engineer • Cloud/Enterprise Security • Automation
+          </div>
+          <div class="mt-2">
+            <span class="badge text-bg-primary">AI/ML Security</span>
+            <span class="badge text-bg-secondary">Secure APIs</span>
+            <span class="badge text-bg-success">Threat Modeling</span>
+            <span class="badge text-bg-info text-dark">SOAR</span>
+            <span class="badge text-bg-warning text-dark">Cloud Security</span>
+          </div>
+        </div>
+        <div class="d-flex flex-wrap gap-2">
+          <a class="btn btn-primary" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">GitHub</a>
+          <a class="btn btn-outline-primary" href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="btn btn-outline-secondary" href="mailto:YOUR_EMAIL">Email</a>
+          <a class="btn btn-outline-dark" href="./resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </div>
+
+      <!-- Hero slider (3 cards + arrows) -->
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="hero-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="hero-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Current Role</h5>
+                  <p class="card-text muted mb-0">
+                    Cybersecurity Engineer / Associate Cybersecurity Engineer — securing enterprise systems,
+                    incident workflows, access controls, and cloud integrations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Value Proposition</h5>
+                  <p class="card-text muted mb-0">
+                    I secure AI-enabled systems against abuse (prompt injection, data leakage, misuse),
+                    using traditional security controls + AI-specific defenses.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">What I Build</h5>
+                  <p class="card-text muted mb-0">
+                    Secure AI/ML APIs, policy enforcement (OPA), rate limiting, audit logging,
+                    and SOC automation playbooks.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Highlights</h5>
+                  <p class="card-text muted mb-0">
+                    Production-style projects with diagrams, threat models, and control mapping
+                    (OWASP AI Top 10 / STRIDE).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="hero-slider" aria-label="Next">›</button>
       </div>
     </div>
-
-    <!-- PAGE 1 -->
-    <div class="row g-4 page" id="page1">
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Secure AI/ML Model Serving API</h5>
-            <p class="card-text muted">
-              Security-first model API with JWT auth, rate limiting, audit logging, prompt-injection defenses,
-              and policy-as-code authorization.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-primary">AI Security</span>
-              <span class="badge bg-success">FastAPI</span>
-              <span class="badge bg-info text-dark">JWT</span>
-              <span class="badge bg-warning text-dark">Redis</span>
-              <span class="badge bg-secondary">OPA</span>
-              <span class="badge bg-danger">Trivy</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/secure-ml-api" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">SOAR / EDR Automation (LimaCharlie + Tines)</h5>
-            <p class="card-text muted">
-              Automated SOC playbooks: detection → triage → containment with audit-friendly response steps.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-warning text-dark">SOAR</span>
-              <span class="badge bg-info text-dark">EDR</span>
-              <span class="badge bg-primary">Automation</span>
-              <span class="badge bg-secondary">Playbooks</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/soar-edr-limacharlie-tines" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PAGE 2 -->
-    <div class="row g-4 page d-none" id="page2">
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">AI Threat Modeling Library</h5>
-            <p class="card-text muted">
-              STRIDE templates for AI APIs, agentic workflows, and RAG pipelines with control mapping.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-danger">Threat Modeling</span>
-              <span class="badge bg-dark">STRIDE</span>
-              <span class="badge bg-secondary">Mermaid</span>
-              <span class="badge bg-primary">OWASP AI</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/ai-threat-models" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">IAM for AI Agents (Non-Human Identities)</h5>
-            <p class="card-text muted">
-              Secure auth patterns for AI agents: lifecycle, least privilege, on-behalf-of flows, revocation, auditability.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-secondary">IAM</span>
-              <span class="badge bg-primary">Authorization</span>
-              <span class="badge bg-success">Least Privilege</span>
-              <span class="badge bg-info text-dark">Audit</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/agent-iam-patterns" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PAGE 3 -->
-    <div class="row g-4 page d-none" id="page3">
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Enterprise Security Write-ups (Sanitized)</h5>
-            <p class="card-text muted">
-              Browser isolation troubleshooting, CASB investigations, ServiceNow incident-style notes, cloud security integrations.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-success">Enterprise</span>
-              <span class="badge bg-info text-dark">ServiceNow</span>
-              <span class="badge bg-secondary">Island</span>
-              <span class="badge bg-primary">CASB</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/security-writeups" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body">
-            <h5 class="card-title">Security Tooling & Hardening Notes</h5>
-            <p class="card-text muted">
-              Practical hardening notes: certificates, secure configs, defensive checklists, and security automation.
-            </p>
-            <div class="d-flex flex-wrap gap-2">
-              <span class="badge bg-warning text-dark">Hardening</span>
-              <span class="badge bg-danger">AppSec</span>
-              <span class="badge bg-secondary">Docs</span>
-            </div>
-          </div>
-          <div class="card-footer bg-white border-0">
-            <a class="btn btn-sm btn-outline-primary" href="https://github.com/YOUR-USERNAME/security-notes" target="_blank" rel="noreferrer">GitHub Repo</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PAGINATION (Back/Next + 1/2/3) -->
-    <nav class="mt-5">
-      <ul class="pagination justify-content-center" id="pagination">
-        <li class="page-item">
-          <a class="page-link" href="#" onclick="prevPage(event)">‹</a>
-        </li>
-        <li class="page-item active"><a class="page-link" href="#" onclick="goPage(event, 1)">1</a></li>
-        <li class="page-item"><a class="page-link" href="#" onclick="goPage(event, 2)">2</a></li>
-        <li class="page-item"><a class="page-link" href="#" onclick="goPage(event, 3)">3</a></li>
-        <li class="page-item">
-          <a class="page-link" href="#" onclick="nextPage(event)">›</a>
-        </li>
-      </ul>
-    </nav>
   </section>
 
-  <footer class="text-center py-4 muted">
-    © <span id="year"></span> Yogita R. Bugade • Hosted on GitHub Pages
+  <!-- ABOUT ME -->
+  <section class="container my-5 anchor-offset" id="about">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">About Me</h2>
+          <div class="muted">Cybersecurity background + transition into AI Security</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="about-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="about-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Background</h5>
+                  <p class="card-text muted mb-0">
+                    Enterprise security experience: incident response workflows, cloud security,
+                    governance/risk/compliance tooling, and defensive engineering.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">AI Security Focus</h5>
+                  <p class="card-text muted mb-0">
+                    Securing AI systems against prompt injection, data leakage, unauthorized tool use,
+                    model/API abuse, and risky automation.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Security Mindset</h5>
+                  <p class="card-text muted mb-0">
+                    I design controls first: authentication/authorization, least privilege,
+                    auditability, rate limiting, and policy-as-code.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Specialization</h5>
+                  <p class="card-text muted mb-0">
+                    AI APIs • Agent identity & authorization • Secure RAG patterns • SOC automation • Cloud controls.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="about-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section class="container my-5 anchor-offset" id="projects">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Featured AI Security Projects</h2>
+          <div class="muted">Each project includes: problem → architecture → threat model → controls → outcomes</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="projects-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="projects-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Secure AI/ML Model Serving API</h5>
+                  <p class="card-text muted">
+                    JWT auth • rate limiting • audit logs • prompt-injection defenses • policy-as-code.
+                  </p>
+                  <div class="d-flex flex-wrap">
+                    <span class="badge text-bg-primary">AI Security</span>
+                    <span class="badge text-bg-success">FastAPI</span>
+                    <span class="badge text-bg-warning text-dark">Redis</span>
+                    <span class="badge text-bg-secondary">OPA</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noreferrer">Write-up</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">SOAR / EDR Automation</h5>
+                  <p class="card-text muted">
+                    Detection → triage → containment playbooks with audit-friendly workflows.
+                  </p>
+                  <div class="d-flex flex-wrap">
+                    <span class="badge text-bg-info text-dark">SOAR</span>
+                    <span class="badge text-bg-secondary">Playbooks</span>
+                    <span class="badge text-bg-primary">Automation</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noreferrer">Architecture</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">AI Threat Modeling Library</h5>
+                  <p class="card-text muted">
+                    STRIDE templates for AI APIs/agents/RAG + control mapping + diagrams.
+                  </p>
+                  <div class="d-flex flex-wrap">
+                    <span class="badge text-bg-danger">Threat Modeling</span>
+                    <span class="badge text-bg-dark">STRIDE</span>
+                    <span class="badge text-bg-secondary">Mermaid</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noreferrer">Templates</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">IAM for AI Agents</h5>
+                  <p class="card-text muted">
+                    Non-human identities • on-behalf-of auth • least privilege • revocation • audit trails.
+                  </p>
+                  <div class="d-flex flex-wrap">
+                    <span class="badge text-bg-secondary">IAM</span>
+                    <span class="badge text-bg-success">Least Privilege</span>
+                    <span class="badge text-bg-info text-dark">Audit</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">Design Doc</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noreferrer">Diagrams</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Secure RAG / Agentic System (Optional)</h5>
+                  <p class="card-text muted">
+                    Guardrails • tool allowlists • sandboxing • sensitive data handling • monitoring.
+                  </p>
+                  <div class="d-flex flex-wrap">
+                    <span class="badge text-bg-primary">RAG</span>
+                    <span class="badge text-bg-warning text-dark">Guardrails</span>
+                    <span class="badge text-bg-secondary">Monitoring</span>
+                  </div>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">GitHub Repo</a>
+                  <a class="btn btn-sm btn-outline-secondary" href="#" target="_blank" rel="noreferrer">Threat Model</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="projects-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI SECURITY KNOWLEDGE -->
+  <section class="container my-5 anchor-offset" id="ai-knowledge">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">AI Security Knowledge</h2>
+          <div class="muted">Principles and defenses I apply in real systems</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="ai-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="ai-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">OWASP AI Top 10 Mapping</h5>
+                  <p class="card-text muted mb-0">
+                    Controls mapping for common AI risks: injection, data leakage, misuse, insecure integration.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Prompt Injection Defenses</h5>
+                  <p class="card-text muted mb-0">
+                    Input constraints, tool allowlists, system prompt hardening, policy checks, output filtering.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Model/API Abuse Prevention</h5>
+                  <p class="card-text muted mb-0">
+                    Rate limiting, authZ scopes, anomaly detection, request signing, replay protection.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Secure RAG Pipelines</h5>
+                  <p class="card-text muted mb-0">
+                    Retrieval constraints, data classification, PII handling, provenance, safe tool access.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Auditability for AI Actions</h5>
+                  <p class="card-text muted mb-0">
+                    Human vs agent actions, on-behalf-of flows, immutable logs, trace IDs, alerts.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="ai-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREAT MODELING & ARCHITECTURE -->
+  <section class="container my-5 anchor-offset" id="threat-modeling">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Threat Modeling & Architecture</h2>
+          <div class="muted">Diagrams, trust boundaries, and control placement</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="tm-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="tm-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">AI System Architecture</h5>
+                  <p class="card-text muted mb-0">
+                    Components, trust zones, and where controls sit (auth, policy, logging, rate limit).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Data Flow Diagrams</h5>
+                  <p class="card-text muted mb-0">
+                    Inputs, retrieval, tool calls, model outputs, and sensitive data pathways.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">STRIDE for AI</h5>
+                  <p class="card-text muted mb-0">
+                    Spoofing/tampering/repudiation/info disclosure/DoS/elevation mapped to AI flows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Trust Boundaries</h5>
+                  <p class="card-text muted mb-0">
+                    Agent vs user boundaries, tool boundaries, data boundaries, network boundaries.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Control Mapping</h5>
+                  <p class="card-text muted mb-0">
+                    Threat → mitigation mapping, security requirements, and verification/testing plan.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="tm-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="container my-5 anchor-offset" id="skills">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Skills</h2>
+          <div class="muted">Grouped the way hiring managers expect</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="skills-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="skills-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">AI & App Security</h5>
+                  <ul class="muted mb-0">
+                    <li>Prompt injection defenses</li>
+                    <li>Secure API design</li>
+                    <li>Policy-as-code authorization</li>
+                    <li>Abuse prevention + rate limiting</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Cloud & Enterprise Security</h5>
+                  <ul class="muted mb-0">
+                    <li>Azure security fundamentals</li>
+                    <li>CASB and data controls</li>
+                    <li>Browser isolation concepts</li>
+                    <li>Incident workflows</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Automation & DevSecOps</h5>
+                  <ul class="muted mb-0">
+                    <li>SOAR playbooks</li>
+                    <li>CI/CD security</li>
+                    <li>Container hardening</li>
+                    <li>Security scanning + SBOM</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Security Engineering</h5>
+                  <ul class="muted mb-0">
+                    <li>Logging & monitoring</li>
+                    <li>Access control & least privilege</li>
+                    <li>Threat modeling</li>
+                    <li>Secure defaults</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="skills-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS & TECHNOLOGIES -->
+  <section class="container my-5 anchor-offset" id="tools">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Tools & Technologies</h2>
+          <div class="muted">Stack you actually used in projects</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="tools-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="tools-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Languages</h5>
+                  <div class="muted">Python • Bash • (Optional) JS/TS</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Frameworks</h5>
+                  <div class="muted">FastAPI • (Optional) LangChain • (Optional) Flask</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Security & DevSecOps</h5>
+                  <div class="muted">JWT • OPA • Trivy • GitHub Actions • Docker</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Cloud & Enterprise</h5>
+                  <div class="muted">Azure • CASB • Browser isolation • ServiceNow</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Observability</h5>
+                  <div class="muted">Audit logs • trace IDs • dashboards/alerts (optional)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="tools-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & EDUCATION -->
+  <section class="container my-5 anchor-offset" id="certs">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Certifications & Education</h2>
+          <div class="muted">Degrees, certifications, relevant learning</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="certs-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="certs-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Education</h5>
+                  <p class="card-text muted mb-0">
+                    Master’s in Cybersecurity (add university + year).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Certifications</h5>
+                  <p class="card-text muted mb-0">
+                    Add security certs here (e.g., Security+, AZ-500, etc.).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">AI Security Learning</h5>
+                  <p class="card-text muted mb-0">
+                    OWASP AI Top 10 • NIST AI RMF (optional) • hands-on labs and write-ups.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Workshops / CTF</h5>
+                  <p class="card-text muted mb-0">
+                    Security challenges, exploit/defense learning, incident simulations (optional).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="certs-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG / WRITE-UPS -->
+  <section class="container my-5 anchor-offset" id="blog">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Blog / Write-ups</h2>
+          <div class="muted">Short posts that show how you think</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="blog-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="blog-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Post Idea 1</h5>
+                  <p class="card-text muted mb-0">How I threat-model an AI API (STRIDE + controls mapping).</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Post Idea 2</h5>
+                  <p class="card-text muted mb-0">Defending against prompt injection in tool-using agents.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Post Idea 3</h5>
+                  <p class="card-text muted mb-0">Secure RAG design: retrieval constraints, PII handling, provenance.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">Read</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Post Idea 4</h5>
+                  <p class="card-text muted mb-0">IAM patterns for AI agents: on-behalf-of, scopes, revocation.</p>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a class="btn btn-sm btn-outline-primary" href="#" target="_blank" rel="noreferrer">Read</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="blog-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section class="container my-5 anchor-offset" id="resume">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Resume</h2>
+          <div class="muted">Downloadable PDF</div>
+        </div>
+        <a class="btn btn-primary" href="./resume.pdf" target="_blank" rel="noreferrer">Download Resume</a>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="resume-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="resume-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">What’s Inside</h5>
+                  <p class="card-text muted mb-0">AI security projects, enterprise experience, security tooling, impact metrics.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Keywords</h5>
+                  <p class="card-text muted mb-0">AI Security • API Security • IAM • Threat Modeling • Automation • Cloud Security</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Recruiter Tip</h5>
+                  <p class="card-text muted mb-0">Keep the resume link visible; mirror project names exactly.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">File Name</h5>
+                  <p class="card-text muted mb-0">Place your PDF in repo root as <code>resume.pdf</code>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="resume-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="container my-5 anchor-offset" id="contact">
+    <div class="section-shell">
+      <div class="section-title">
+        <div>
+          <h2 class="fw-bold mb-1">Contact</h2>
+          <div class="muted">Simple and direct</div>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-prev="contact-slider" aria-label="Previous">‹</button>
+
+        <div class="slider-viewport">
+          <div class="slider-track" data-slider="contact-slider">
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Email</h5>
+                  <p class="card-text muted mb-0">
+                    <a href="mailto:YOUR_EMAIL">YOUR_EMAIL</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">LinkedIn</h5>
+                  <p class="card-text muted mb-0">
+                    <a href="https://www.linkedin.com/in/YOUR-LINKEDIN" target="_blank" rel="noreferrer">YOUR-LINKEDIN</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">GitHub</h5>
+                  <p class="card-text muted mb-0">
+                    <a href="https://github.com/YOUR-USERNAME" target="_blank" rel="noreferrer">github.com/YOUR-USERNAME</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="slider-card">
+              <div class="card h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Calendar (Optional)</h5>
+                  <p class="card-text muted mb-0">
+                    Add a scheduling link if you want (Calendly/free alternative).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn btn-outline-secondary nav-arrow" type="button" data-slider-next="contact-slider" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="container py-4 text-center muted">
+    © <span id="year"></span> Your Name • Hosted on GitHub Pages
   </footer>
 
   <!-- Bootstrap JS -->
@@ -199,44 +947,92 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    let currentPage = 1;
-    const totalPages = 3;
-
-    function showOnly(pageNumber) {
-      document.querySelectorAll(".page").forEach(p => p.classList.add("d-none"));
-      document.getElementById("page" + pageNumber).classList.remove("d-none");
+    /**
+     * Slider logic: each section has a track and two arrow buttons.
+     * Shows 3 cards on desktop, 2 on tablet, 1 on mobile.
+     */
+    function getVisibleCount() {
+      const w = window.innerWidth;
+      if (w <= 575.98) return 1;
+      if (w <= 991.98) return 2;
+      return 3;
     }
 
-    function setActive(pageNumber) {
-      const items = document.querySelectorAll("#pagination .page-item");
-      // order: prev, 1, 2, 3, next
-      items.forEach((li, idx) => {
-        if (idx >= 1 && idx <= 3) li.classList.remove("active");
+    const sliderState = new Map(); // sliderName -> { index }
+
+    function initSliders() {
+      document.querySelectorAll("[data-slider]").forEach(track => {
+        const name = track.getAttribute("data-slider");
+        if (!sliderState.has(name)) sliderState.set(name, { index: 0 });
+        updateSlider(name);
       });
-      items[pageNumber].classList.add("active");
     }
 
-    function goPage(e, pageNumber) {
-      e.preventDefault();
-      currentPage = pageNumber;
-      showOnly(currentPage);
-      setActive(currentPage);
+    function updateSlider(name) {
+      const track = document.querySelector(`[data-slider="${name}"]`);
+      if (!track) return;
+
+      const cards = track.querySelectorAll(".slider-card");
+      const total = cards.length;
+      const visible = getVisibleCount();
+
+      // Clamp index so we never overscroll
+      const state = sliderState.get(name) || { index: 0 };
+      const maxIndex = Math.max(0, total - visible);
+      state.index = Math.min(Math.max(0, state.index), maxIndex);
+      sliderState.set(name, state);
+
+      // Each card has flex-basis; use the first card width + gap to calculate slide distance
+      const firstCard = cards[0];
+      if (!firstCard) return;
+
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = 16; // must match CSS .slider-track gap
+      const x = (cardWidth + gap) * state.index;
+      track.style.transform = `translateX(-${x}px)`;
+
+      // Disable arrows at ends
+      const prevBtn = document.querySelector(`[data-slider-prev="${name}"]`);
+      const nextBtn = document.querySelector(`[data-slider-next="${name}"]`);
+      if (prevBtn) prevBtn.disabled = state.index === 0;
+      if (nextBtn) nextBtn.disabled = state.index === maxIndex;
     }
 
-    function prevPage(e) {
-      e.preventDefault();
-      currentPage = Math.max(1, currentPage - 1);
-      showOnly(currentPage);
-      setActive(currentPage);
+    function slidePrev(name) {
+      const state = sliderState.get(name) || { index: 0 };
+      state.index -= 1;
+      sliderState.set(name, state);
+      updateSlider(name);
     }
 
-    function nextPage(e) {
-      e.preventDefault();
-      currentPage = Math.min(totalPages, currentPage + 1);
-      showOnly(currentPage);
-      setActive(currentPage);
+    function slideNext(name) {
+      const state = sliderState.get(name) || { index: 0 };
+      state.index += 1;
+      sliderState.set(name, state);
+      updateSlider(name);
     }
+
+    // Hook up arrow buttons
+    document.addEventListener("click", (e) => {
+      const prev = e.target.closest("[data-slider-prev]");
+      const next = e.target.closest("[data-slider-next]");
+      if (prev) {
+        e.preventDefault();
+        slidePrev(prev.getAttribute("data-slider-prev"));
+      }
+      if (next) {
+        e.preventDefault();
+        slideNext(next.getAttribute("data-slider-next"));
+      }
+    });
+
+    // Recalculate on resize (visible cards changes)
+    window.addEventListener("resize", () => {
+      sliderState.forEach((_, name) => updateSlider(name));
+    });
+
+    // Init
+    initSliders();
   </script>
-
 </body>
 </html>
