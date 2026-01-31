@@ -286,7 +286,7 @@
 </nav>
 
   <!-- HERO (NO ARROWS) -->
-  <section class="container my-5" id="#hero">
+  <section class="container my-5" id="hero">
     <div class="shell">
       <div class="section-title">
         <div>
@@ -353,7 +353,7 @@
   </section>
 
   <!-- ABOUT (NO ARROWS) -->
-  <section class="container my-5" id="#about">
+  <section class="container my-5" id="about">
     <div class="shell">
       <div class="section-title">
         <div>
@@ -1047,5 +1047,23 @@
 
     initSliders();
   </script>
+  <script>
+  // Close mobile menu after clicking a nav link
+  document.querySelectorAll('#navMenu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      const navMenu = document.getElementById('navMenu');
+      if (navMenu.classList.contains('show')) {
+        bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
+      }
+    });
+  });
+
+  // Re-init ScrollSpy (fixes "active link not updating")
+  window.addEventListener('load', () => {
+    const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]');
+    dataSpyList.forEach(el => bootstrap.ScrollSpy.getOrCreateInstance(el));
+  });
+</script>
+
 </body>
 </html>
