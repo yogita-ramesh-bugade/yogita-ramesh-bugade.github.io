@@ -1054,7 +1054,23 @@
 
     initSliders();
   </script>
+    <script>
+    // Recreate ScrollSpy with correct offset and refresh
+    window.addEventListener('load', () => {
+      const el = document.body;
+      bootstrap.ScrollSpy.getOrCreateInstance(el, { target: '#topnav', offset: 140 });
+      bootstrap.ScrollSpy.getInstance(el).refresh();
+    });
   
+    // When user clicks a nav link, set it active immediately
+    document.querySelectorAll('#topnav .nav-link[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        document.querySelectorAll('#topnav .nav-link').forEach(a => a.classList.remove('active'));
+        link.classList.add('active');
+      });
+    });
+  </script>
+
   
 
 
