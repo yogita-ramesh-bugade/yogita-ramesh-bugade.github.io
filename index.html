@@ -235,8 +235,8 @@
       position: relative;
       transition:
         box-shadow 220ms ease,
-        border-color 220ms ease,
-        background 220ms ease;
+        /*border-color 220ms ease,
+        background 220ms ease;*/
     }
 
     .anchor-spacer{
@@ -246,17 +246,14 @@
     
     /* Strong neon-style glow */
     .card-hover:hover{
-      background: rgba(255,255,255,.08);
+      /*background: rgba(255,255,255,.08);
     
       /* Multi-layer glow */
       box-shadow:
-        0 0 0 1px rgba(124,58,237,.55),   /* inner purple ring */
-        0 0 0 2px rgba(34,211,238,.35),   /* cyan ring */
-        0 0 28px rgba(124,58,237,.65),    /* purple glow */
-        0 0 48px rgba(34,211,238,.45),    /* cyan glow */
-        0 26px 60px rgba(0,0,0,.65);      /* depth shadow */
-    
-      border-color: rgba(124,58,237,.75);
+        0 0 22px rgba(124,58,237,.85),   /* inner purple glow */
+        0 0 42px rgba(34,211,238,.65),   /* cyan glow */
+        0 0 68px rgba(124,58,237,.55);   /* outer fade */
+      /*border-color: rgba(124,58,237,.75);*/
     }
 
   </style>
@@ -423,8 +420,8 @@
         <div class="slider-viewport">
           <div class="slider-track" data-slider="ai-projects-slider">
             <div class="slider-card">
-              <div class="card h-100">
-                <div class="card-body card-hover">
+              <div class="card card-hover h-100">
+                <div class="card-body">
                   <h5 class="card-title">Secure AI/ML Model Serving API</h5>
                   <p class="card-text">
                     JWT auth • scoped authorization • Redis rate limiting • audit logs • policy-as-code (OPA) • security scanning.
@@ -443,8 +440,8 @@
             </div>
 
             <div class="slider-card">
-              <div class="card h-100">
-                <div class="card-body card-hover">
+              <div class="card card-hover h-100">
+                <div class="card-body">
                   <h5 class="card-title">Prompt Injection Defense Showcase</h5>
                   <p class="card-text">
                     Demonstrates injection patterns, safe tool allowlists, policy checks, and rejection/alerting logic.
