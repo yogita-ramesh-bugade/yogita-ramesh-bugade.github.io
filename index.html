@@ -37,7 +37,6 @@
         radial-gradient(900px 600px at 50% 90%, rgba(245,158,11,.18), transparent 55%),
         var(--bg);
       color: var(--text);
-      position: relative;
     }
 
     /* Navbar */
@@ -221,40 +220,11 @@
       height: 120px;          /* same as navbar offset */
       margin-top: -120px;     /* cancels height so layout doesn't shift */
     }
-      
-    /* =========================
-   NAV HOVER HIGHLIGHT
-   ========================= */
-
-    .navbar .nav-link{
-      position: relative;
-      padding: .45rem .8rem;
-      border-radius: 999px;
-      color: rgba(255,255,255,.75);
-      transition:
-        color 160ms ease,
-        background-color 160ms ease,
-        border-color 160ms ease;
-    }
-    
-    /* Hover highlight */
-    .navbar .nav-link:hover{
-      color: rgba(255,255,255,1);
-      background-color: rgba(255,255,255,.10); /* smoky highlight */
-      border: 1px solid rgba(255,255,255,.18);
-    }
-    
-    /* Active (current section) highlight */
-    .navbar .nav-link.active{
-      color: rgba(255,255,255,1) !important;
-      background-color: rgba(255,255,255,.14);
-      border: 1px solid rgba(124,58,237,.55); /* purple accent */
-    }
 
   </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="130" data-bs-smooth-scroll="true" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-smooth-scroll="true" tabindex="0">
 
   <!-- NAVBAR -->
   <nav id="topnav" class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -1054,25 +1024,5 @@
 
     initSliders();
   </script>
-    <script>
-    // Recreate ScrollSpy with correct offset and refresh
-    window.addEventListener('load', () => {
-      const el = document.body;
-      bootstrap.ScrollSpy.getOrCreateInstance(el, { target: '#topnav', offset: 140 });
-      bootstrap.ScrollSpy.getInstance(el).refresh();
-    });
-  
-    // When user clicks a nav link, set it active immediately
-    document.querySelectorAll('#topnav .nav-link[href^="#"]').forEach(link => {
-      link.addEventListener('click', () => {
-        document.querySelectorAll('#topnav .nav-link').forEach(a => a.classList.remove('active'));
-        link.classList.add('active');
-      });
-    });
-  </script>
-
-  
-
-
 </body>
 </html>
