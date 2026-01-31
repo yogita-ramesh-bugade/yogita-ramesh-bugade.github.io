@@ -230,13 +230,10 @@
         /* =========================
        STRONG GLOW — NO MOVEMENT
        ========================= */
-    
+
     .card-hover{
       position: relative;
-      transition:
-        box-shadow 220ms ease,
-        /*border-color 220ms ease,
-        background 220ms ease;*/
+      transition: border-color 180ms ease;
     }
 
     .anchor-spacer{
@@ -246,14 +243,8 @@
     
     /* Strong neon-style glow */
     .card-hover:hover{
-      /*background: rgba(255,255,255,.08);
-    
-      /* Multi-layer glow */
-      box-shadow:
-        0 0 22px rgba(124,58,237,.85),   /* inner purple glow */
-        0 0 42px rgba(34,211,238,.65),   /* cyan glow */
-        0 0 68px rgba(124,58,237,.55);   /* outer fade */
       /*border-color: rgba(124,58,237,.75);*/
+      border-color: rgba(124,58,237,1);   /* strong purple border */
     }
 
   </style>
