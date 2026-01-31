@@ -220,6 +220,35 @@
       height: 120px;          /* same as navbar offset */
       margin-top: -120px;     /* cancels height so layout doesn't shift */
     }
+      
+    /* =========================
+   NAV HOVER HIGHLIGHT
+   ========================= */
+
+    .navbar .nav-link{
+      position: relative;
+      padding: .45rem .8rem;
+      border-radius: 999px;
+      color: rgba(255,255,255,.75);
+      transition:
+        color 160ms ease,
+        background-color 160ms ease,
+        border-color 160ms ease;
+    }
+    
+    /* Hover highlight */
+    .navbar .nav-link:hover{
+      color: rgba(255,255,255,1);
+      background-color: rgba(255,255,255,.10); /* smoky highlight */
+      border: 1px solid rgba(255,255,255,.18);
+    }
+    
+    /* Active (current section) highlight */
+    .navbar .nav-link.active{
+      color: rgba(255,255,255,1) !important;
+      background-color: rgba(255,255,255,.14);
+      border: 1px solid rgba(124,58,237,.55); /* purple accent */
+    }
 
   </style>
 </head>
