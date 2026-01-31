@@ -233,18 +233,18 @@
 
     .card-hover{
       position: relative;
-      transition: border-color 180ms ease;
+      border: 1px solid rgba(255,255,255,.12); /* default border */
+      transition: border 160ms ease;
+    }
+
+    /* Thick border on hover */
+    .card-hover:hover{
+      border: 3px solid rgba(124,58,237,1);   /* strong purple */
     }
 
     .anchor-spacer{
       height: 120px;          /* same as navbar offset */
       margin-top: -120px;     /* cancels height so layout doesn't shift */
-    }
-    
-    /* Strong neon-style glow */
-    .card-hover:hover{
-      /*border-color: rgba(124,58,237,.75);*/
-      border-color: rgba(124,58,237,1);   /* strong purple border */
     }
 
   </style>
