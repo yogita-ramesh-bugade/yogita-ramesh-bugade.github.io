@@ -238,6 +238,11 @@
         border-color 220ms ease,
         background 220ms ease;
     }
+
+    .anchor-spacer{
+      height: 130px;          /* same as navbar offset */
+      margin-top: -130px;     /* cancels height so layout doesn't shift */
+    }
     
     /* Strong neon-style glow */
     .card-hover:hover{
@@ -287,6 +292,7 @@
 
   <!-- HERO (NO ARROWS) -->
   <section class="container my-5" id="hero">
+    <div class="anchor-spacer"></div>
     <div class="shell">
       <div class="section-title">
         <div>
@@ -354,6 +360,7 @@
 
   <!-- ABOUT (NO ARROWS) -->
   <section class="container my-5" id="about">
+    <div class="anchor-spacer"></div>
     <div class="shell">
       <div class="section-title">
         <div>
