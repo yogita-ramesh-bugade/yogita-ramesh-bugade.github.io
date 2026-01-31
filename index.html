@@ -1054,23 +1054,7 @@
 
     initSliders();
   </script>
-  <script>
-  // Close mobile menu after clicking a nav link
-  document.querySelectorAll('#navMenu .nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const navMenu = document.getElementById('navMenu');
-      if (navMenu.classList.contains('show')) {
-        bootstrap.Collapse.getOrCreateInstance(navMenu).hide();
-      }
-    });
-  });
-
-  // Re-init ScrollSpy (fixes "active link not updating")
-  window.addEventListener('load', () => {
-    const dataSpyList = document.querySelectorAll('[data-bs-spy="scroll"]');
-    dataSpyList.forEach(el => bootstrap.ScrollSpy.getOrCreateInstance(el));
-  });
-</script>
+  
   <script>
   window.addEventListener('load', () => {
     const el = document.body;
