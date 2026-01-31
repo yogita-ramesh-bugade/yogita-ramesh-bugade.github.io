@@ -203,37 +203,17 @@
     .to-top.show{ display:inline-flex; gap:8px; align-items:center; }
 
         /* =========================
-       SAFE HOVER (NO MOVEMENT)
-       ========================= */
-    
-   /* .card-hover{
-      position: relative;
-      transition: 
-        box-shadow 200ms ease,
-        border-color 200ms ease,
-        background 200ms ease;
-    }
-    
-    /* Highlight only — no translate / no scale 
-    .card-hover:hover{
-      /*box-shadow:
-        0 0 0 1px rgba(124,58,237,.35),
-        0 0 0 2px rgba(34,211,238,.15),
-        0 18px 40px rgba(0,0,0,.45);
-      border-color: rgba(124,58,237,.45);
-      background: rgba(255,255,255,.07);
-      box-shadow: 0 0 0 2px rgba(124,58,237,.35);
-      border-color: rgba(124,58,237,.55);
-      background: rgba(255,255,255,.06);
-    }*/
-
-        /* =========================
        STRONG GLOW — NO MOVEMENT
        ========================= */
-
-    
     .card-hover{
-      border: 3px solid rgba(255,255,255,.12);
+      position: relative;
+      border: 3px solid transparent;   /* invisible by default */
+      transition: border-color 160ms ease;
+    }
+    
+    /* Border appears ONLY on hover */
+    .card-hover:hover{
+      border-color: rgba(124,58,237,1); /* strong purple */
     }
 
     .anchor-spacer{
