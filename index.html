@@ -37,6 +37,7 @@
         radial-gradient(900px 600px at 50% 90%, rgba(245,158,11,.18), transparent 55%),
         var(--bg);
       color: var(--text);
+      position: relative;
     }
 
     /* Navbar */
@@ -253,7 +254,7 @@
   </style>
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-smooth-scroll="true" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#topnav" data-bs-offset="130" data-bs-smooth-scroll="true" tabindex="0">
 
   <!-- NAVBAR -->
   <nav id="topnav" class="navbar navbar-expand-lg navbar-dark sticky-top">
@@ -1070,6 +1071,15 @@
     dataSpyList.forEach(el => bootstrap.ScrollSpy.getOrCreateInstance(el));
   });
 </script>
+  <script>
+  window.addEventListener('load', () => {
+    const el = document.body;
+    bootstrap.ScrollSpy.getOrCreateInstance(el, { target: '#topnav', offset: 130 });
+    // Force recalculation
+    bootstrap.ScrollSpy.getInstance(el).refresh();
+  });
+</script>
+
 
 </body>
 </html>
